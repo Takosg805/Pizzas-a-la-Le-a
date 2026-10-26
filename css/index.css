@@ -527,25 +527,6 @@ button, a {
    
 }
 
-.map-placeholder {
-    min-height: 270px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: repeating-linear-gradient(35deg, rgb(231, 228, 222) 0px, rgb(231, 228, 222) 25px, rgb(246, 244, 239) 25px, rgb(246, 244, 239) 28px);
-    border: 1px solid var(--allende-border);
-    border-radius: var(--radius);
-    text-align: center;
-    padding: 32px;
-   
-}
-
-.map-placeholder strong {
-    font: 700 28px Playfair, serif;
-   
-}
-
 .contact-line {
     padding: 10px 0px;
     border-bottom: 1px solid var(--allende-border);
