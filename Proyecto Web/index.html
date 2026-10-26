@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#171715">
+        <title>Inicio | Allende</title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <header id="site-header" class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="index.html">
+                    <img src="images/logo.png" alt="Logo de Pizzas a la leña Allende">
+                    <span>
+                        <strong>ALLENDE</strong>
+                        <small>PIZZAS A LA LEÑA</small>
+                    </span>
+                </a>
+                <nav id="public-nav" class="site-nav" aria-label="Principal">
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="index.html#menu">Menú</a>
+                    <a href="index.html#promociones">Promociones</a>
+                    <a href="index.html#nosotros">Nosotros</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </nav>
+                <div class="header-actions">
+                    <a class="cart-link" href="pedido.html">Mi pedido <span class="badge">2</span>
+                    </a>
+                    <a class="button" href="index.html#menu">Pedir ahora</a>
+                </div>
+            </div>
+        </header>
+        <main id="contenido">
+            <!-- Se conservan las clases de tu menú: selectores, seleccion, descargar, seleccion-productos, contenedor-producto e info. -->
+            <section id="inicio" class="hero">
+                <div class="container">
+                    <div class="hero-copy">
+                        <p class="eyebrow">Pizzas a la leña</p>
+                        <h1>El sabor de Allende,<br>recién salido del horno</h1>
+                        <p>Conoce nuestro menú y elige tu favorita.</p>
+                        <div class="actions">
+                            <a class="button" href="#menu">Ver menú <span aria-hidden="true">→</span>
+                            </a>
+                            <a class="button outline" href="pedido.html">Hacer pedido</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="menu" class="section">
+                <div class="container">
+                    <h2 class="section-title">Nuestro menú</h2>
+                    <p class="menu-intro">Selecciona una categoría y descubre nuestras especialidades.</p>
+                    <div class="menu-toolbar">
+                        <div class="selectores" role="group" aria-label="Categorías">
+                            <button class="seleccion active" aria-pressed="true">Pizzas</button>
+                            <button class="seleccion" aria-pressed="false">Pastas</button>
+                            <button class="seleccion" aria-pressed="false">Lasaña</button>
+                        </div>
+                        <button class="descargar" id="download-menu">↓ Descargar menú</button>
+                    </div>
+                    <div id="product-grid" class="seleccion-productos" aria-live="polite">
+                        <article class="contenedor-producto">
+                            <div class="imagenes">
+                                <img src="images/pizza_peperoni.png" alt="Peperoni (imagen ilustrativa)">
+                            </div>
+                            <div class="info">
+                                <h3>Peperoni</h3>
+                                <p>Salsa de tomate, queso mozzarella, peperoni y un toque de especias.</p>
+                            </div>
+                            <div class="product-footer">
+                                <span class="price">$250.00</span>
+                                <button class="text-button">Ver extras</button>
+                                <button class="button small">Agregar</button>
+                            </div>
+                        </article>
+                        <article class="contenedor-producto">
+                            <div class="imagenes">
+                                <img src="images/pizza_hawaiana.png" alt="Hawaiana (imagen ilustrativa)">
+                            </div>
+                            <div class="info">
+                                <h3>Hawaiana</h3>
+                                <p>Salsa de tomate, queso mozzarella, jamón y piña.</p>
+                            </div>
+                            <div class="product-footer">
+                                <span class="price">$250.00</span>
+                                <button class="text-button">Ver extras</button>
+                                <button class="button small">Agregar</button>
+                            </div>
+                        </article>
+                        <article class="contenedor-producto">
+                            <div class="imagenes">
+                                <img src="images/pizza_mexicana.png" alt="Especial Allende (imagen ilustrativa)">
+                            </div>
+                            <div class="info">
+                                <h3>Especial Allende</h3>
+                                <p>Salsa de tomate, queso mozzarella, jamón, peperoni, champiñones, pimiento morrón, cebolla y aceitunas.</p>
+                            </div>
+                            <div class="product-footer">
+                                <span class="price">$250.00</span>
+                                <button class="text-button">Ver extras</button>
+                                <button class="button small">Agregar</button>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="small muted" style="margin-top:18px">Precios e imágenes de referencia.</p>
+                </div>
+            </section>
+            <section id="promociones" class="promo-band">
+                <div class="container">
+                    <h2>Promociones</h2>
+                    <p>Consulta las ofertas publicadas por el negocio.</p>
+                    <a class="button" href="#promociones-lista">Ver promociones →</a>
+                </div>
+            </section>
+            <section id="promociones-lista" class="container section">
+                <div id="public-promos">
+                    <div class="empty">
+                        <h3>Promociones por confirmar</h3>
+                        <p>Aún no hay promociones vigentes publicadas en esta .</p>
+                    </div>
+                </div>
+            </section>
+            <section id="nosotros" class="section">
+                <div class="container history-layout">
+                    <img class="history-photo" src="images/local.jpg" alt="Fotografía del establecimiento Pizzas a la leña Allende" loading="lazy">
+                    <div>
+                        <p class="eyebrow">Nuestra esencia</p>
+                        <h2>Nuestra historia</h2>
+                        <p id="history-text">Pizzas a la leña Allende es un negocio de Ciudad Hidalgo, Michoacán, dedicado a la elaboración de pizzas a la leña. Conoce nuestro menú y elige tu favorita.</p>
+                        <details>
+                            <summary>Conoce nuestra misión y visión</summary>
+                            <h3 style="margin-top:18px">Misión</h3>
+                            <p id="mission-text">Elaborar pizzas a la leña que destaquen por su sabor y calidad, dando a conocer la identidad de Pizzas a la leña Allende y acercando sus productos a la comunidad de Ciudad Hidalgo.</p>
+                            <h3>Visión</h3>
+                            <p id="vision-text">Consolidarse como una pizzería reconocida en Ciudad Hidalgo y localidades cercanas, ampliando gradualmente su presencia mediante nuevas sucursales y conservando el sabor y la calidad que distinguen al negocio.</p>
+                        </details>
+                        <h3 style="margin-top:24px">Un lugar para compartir</h3>
+                        <div class="gallery" id="public-gallery">
+                            <img src="images/local.jpg" alt="Establecimiento Allende" loading="lazy">
+                            <img src="images/pizza_peperoni.png" alt="Pizza ilustrativa" loading="lazy">
+                            <img src="images/pizza_hawaiana.png" alt="Pizza ilustrativa" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="callout">
+                <div class="container">
+                    <div>
+                        <h2>¿Listo para pedir?</h2>
+                        <p>Agrega tus productos y elige cómo recibirlos.</p>
+                    </div>
+                    <a class="button" href="pedido.html">Ir a mi pedido →</a>
+                </div>
+            </section>
+            <section id="contacto" class="section">
+                <div class="container">
+                    <h2 class="section-title">Visítanos</h2>
+                    <div class="contact-layout">
+                        <div class="map-placeholder">
+                            <strong>Allende</strong>
+                            <p>Ciudad Hidalgo, Michoacán</p>
+                            <a class="button outline" id="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Ignacio%20Allende%20127%2C%20Ciudad%20Hidalgo%2C%20Michoac%C3%A1n" target="_blank" rel="noopener">Abrir ubicación en Google Maps ↗</a>
+                        </div>
+                        <div>
+                            <div class="contact-line">
+                                <strong>Dirección</strong>
+                                <p id="address-text">Ignacio Allende 127, Ciudad Hidalgo, Michoacán</p>
+                            </div>
+                            <div class="contact-line">
+                                <strong>Teléfono</strong>
+                                <p>
+                                    <a id="phone-link" href="tel:7861249043">7861249043</a>
+                                </p>
+                            </div>
+                            <div class="contact-line">
+                                <strong>Horario</strong>
+                                <p id="hours-text">Horarios por confirmar</p>
+                            </div>
+                            <div class="contact-line">
+                                <strong>Síguenos en redes</strong>
+                                <div id="social-links">
+                                    <p class="small">Facebook: enlace por confirmar</p>
+                                    <p class="small">Instagram: enlace por confirmar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="site-footer" class="site-footer">
+            <div class="container footer-inner">
+                <a class="brand" href="index.html">
+                    <img src="images/logo.png" alt="Logo de Pizzas a la leña Allende">
+                    <span>
+                        <strong>ALLENDE</strong>
+                        <small>PIZZAS A LA LEÑA</small>
+                    </span>
+                </a>
+                <div class="actions">
+                    <a href="index.html#contacto">Contacto</a>
+                    <a href="login.html">Acceso administrativo</a>
+                </div>
+                <p>Pizzas a la leña Allende · Ciudad Hidalgo, Michoacán</p>
+            </div>
+        </footer>
+    </body>
+</html>

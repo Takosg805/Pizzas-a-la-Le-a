@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#171715">
+        <title>Usuarios y roles | Allende</title>
+        <link rel="icon" href="../../images/logo.png">
+        <link rel="stylesheet" href="../css/usuarios.css">
+        
+    </head>
+    <body>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="admin-layout">
+            <aside id="admin-sidebar" class="admin-sidebar">
+                <a class="brand" href="../../index.html">
+                    <img src="../../images/logo.png" alt="Logo de Pizzas a la leña Allende">
+                    <span>
+                        <strong>ALLENDE</strong>
+                        <small>PIZZAS A LA LEÑA</small>
+                    </span>
+                </a>
+                <nav aria-label="Administración">
+                    <a href="index.html" class="">
+                        <span class="nav-icon" aria-hidden="true">⌂</span>Panel</a>
+                    <a href="productos.html" class="">
+                        <span class="nav-icon" aria-hidden="true">◫</span>Productos</a>
+                    <a href="promociones.html" class="">
+                        <span class="nav-icon" aria-hidden="true">◇</span>Promociones</a>
+                    <a href="pedidos.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▤</span>Pedidos</a>
+                    <a href="contenido.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▣</span>Contenido del sitio</a>
+                    <a href="inventario.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▦</span>Inventario</a>
+                    <a href="ventas.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▥</span>Punto de venta</a>
+                    <a href="reportes.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▥</span>Reportes</a>
+                    <a href="usuarios.html" class="active" aria-current="page">
+                        <span class="nav-icon" aria-hidden="true">♙</span>Usuarios</a>
+                    <div class="nav-bottom">
+                        <a href="../../index.html">↗ Ver sitio público</a>
+                        <a href="../../login.html">Salir</a>
+                    </div>
+                </nav>
+            </aside>
+            <div>
+                <div id="admin-topbar" class="admin-topbar">
+                    <span class="small">Administración de Allende</span>
+                    <div class="actions">
+                        <span>Administrador</span>
+                        <a class="text-button" href="../../login.html">Salir</a>
+                    </div>
+                </div>
+                <main id="contenido" class="admin-content">
+                    <div class="admin-heading">
+                        <div>
+                            <h1>Usuarios y roles</h1>
+                            <p>Administra el acceso y los roles del personal.</p>
+                        </div>
+                    </div>
+                    <div class="admin-split">
+                        <div id="users-list">
+                            <div class="table-wrap">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Usuario</th>
+                                            <th scope="col">Rol</th>
+                                            <th scope="col">Estado</th>
+                                            <th scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Administrador</td>
+                                            <td>admin</td>
+                                            <td>Administrador</td>
+                                            <td>
+                                                <span class="status good">Activo</span>
+                                            </td>
+                                            <td>
+                                                <div class="actions">
+                                                    <button class="button outline small">Editar</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <form class="card" id="user-form">
+                            <h2 id="user-form-title">Agregar usuario</h2>
+                            <div class="field">
+                                <label for="nombre">Nombre</label>
+                                <input id="nombre" name="nombre" type="text" required="" maxlength="100" value="">
+                            </div>
+                            <div class="field">
+                                <label for="usuario">Nombre de usuario</label>
+                                <input id="usuario" name="usuario" type="text" required="" pattern="[a-zA-Z0-9_]{3,30}" maxlength="30" value="">
+                            </div>
+                            <div class="field">
+                                <label for="new-password">Nueva contraseña</label>
+                                <input type="password" id="new-password" name="new-password" placeholder="Escribe una contraseña">
+                            </div>
+                            <div class="field">
+                                <label for="rol">Rol</label>
+                                <select id="rol" name="rol">
+                                    <option value="Administrador" selected>Administrador</option>
+                                    <option value="Empleado">Empleado</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="estado">Estado</label>
+                                <select id="estado" name="estado">
+                                    <option value="Activo" selected>Activo</option>
+                                    <option value="Inactivo">Inactivo</option>
+                                </select>
+                            </div>
+                            <p id="user-error" class="form-error" role="alert"></p>
+                            <div class="actions">
+                                <button class="button" type="button">Guardar usuario</button>
+                                <button type="button" class="button ghost" id="cancel-user">Limpiar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <footer class="admin-footer">Pizzas a la leña Allende</footer>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

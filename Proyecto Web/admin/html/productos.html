@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#171715">
+        <title>Catálogo administrativo | Allende</title>
+        <link rel="icon" href="../../images/logo.png">
+        <link rel="stylesheet" href="../css/productos.css">
+        
+    </head>
+    <body>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="admin-layout">
+            <aside id="admin-sidebar" class="admin-sidebar">
+                <a class="brand" href="../../index.html">
+                    <img src="../../images/logo.png" alt="Logo de Pizzas a la leña Allende">
+                    <span>
+                        <strong>ALLENDE</strong>
+                        <small>PIZZAS A LA LEÑA</small>
+                    </span>
+                </a>
+                <nav aria-label="Administración">
+                    <a href="index.html" class="">
+                        <span class="nav-icon" aria-hidden="true">⌂</span>Panel</a>
+                    <a href="productos.html" class="active" aria-current="page">
+                        <span class="nav-icon" aria-hidden="true">◫</span>Productos</a>
+                    <a href="promociones.html" class="">
+                        <span class="nav-icon" aria-hidden="true">◇</span>Promociones</a>
+                    <a href="pedidos.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▤</span>Pedidos</a>
+                    <a href="contenido.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▣</span>Contenido del sitio</a>
+                    <a href="inventario.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▦</span>Inventario</a>
+                    <a href="ventas.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▥</span>Punto de venta</a>
+                    <a href="reportes.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▥</span>Reportes</a>
+                    <a href="usuarios.html" class="">
+                        <span class="nav-icon" aria-hidden="true">♙</span>Usuarios</a>
+                    <div class="nav-bottom">
+                        <a href="../../index.html">↗ Ver sitio público</a>
+                        <a href="../../login.html">Salir</a>
+                    </div>
+                </nav>
+            </aside>
+            <div>
+                <div id="admin-topbar" class="admin-topbar">
+                    <span class="small">Administración de Allende</span>
+                    <div class="actions">
+                        <span>Administrador</span>
+                        <a class="text-button" href="../../login.html">Salir</a>
+                    </div>
+                </div>
+                <main id="contenido" class="admin-content">
+                    <div class="admin-heading">
+                        <div>
+                            <h1>Productos</h1>
+                            <p>Administra el catálogo de pizzas, pastas y lasaña.</p>
+                        </div>
+                        <a class="button" href="producto-formulario.html">+ Nuevo producto</a>
+                    </div>
+                    <div class="toolbar">
+                        <input class="control" id="product-search" type="search" aria-label="Buscar producto" placeholder="Buscar producto…" value="">
+                        <select class="control" id="product-category" aria-label="Filtrar categoría">
+                            <option value="" selected>Todas las categorías</option>
+                            <option>Pizzas</option>
+                            <option>Pastas</option>
+                            <option>Lasaña</option>
+                        </select>
+                        <select class="control" id="product-status" aria-label="Estado del producto">
+                            <option value="all" selected>Todos los estados</option>
+                            <option value="active">Disponibles</option>
+                            <option value="inactive">Retirados</option>
+                        </select>
+                    </div>
+                    <div id="admin-product-list">
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Ingredientes y extras</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Estado</th>
+                                        <th scope="col">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img class="table-thumb" src="../../images/pizza_peperoni.png" alt="Peperoni">
+                                        </td>
+                                        <td>
+                                            <strong>Peperoni</strong>
+                                            <br>
+                                            <small>Pizzas</small>
+                                        </td>
+                                        <td>Salsa de tomate, queso mozzarella, peperoni y un toque de especias.<br>
+                                            <small class="muted">Queso extra:20 Peperoni extra:25</small>
+                                        </td>
+                                        <td>$250.00</td>
+                                        <td>
+                                            <span class="status ">Disponible</span>
+                                        </td>
+                                        <td>
+                                            <div class="actions">
+                                                <a class="button outline small" href="producto-formulario.html">Editar</a>
+                                                <button class="button ghost small">Retirar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="table-thumb" src="../../images/pizza_hawaiana.png" alt="Hawaiana">
+                                        </td>
+                                        <td>
+                                            <strong>Hawaiana</strong>
+                                            <br>
+                                            <small>Pizzas</small>
+                                        </td>
+                                        <td>Salsa de tomate, queso mozzarella, jamón y piña.<br>
+                                            <small class="muted">Queso extra:20
+Piña extra:15</small>
+                                        </td>
+                                        <td>$250.00</td>
+                                        <td>
+                                            <span class="status ">Disponible</span>
+                                        </td>
+                                        <td>
+                                            <div class="actions">
+                                                <a class="button outline small" href="producto-formulario.html">Editar</a>
+                                                <button class="button ghost small">Retirar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="table-thumb" src="../../images/pizza_mexicana.png" alt="Especial Allende">
+                                        </td>
+                                        <td>
+                                            <strong>Especial Allende</strong>
+                                            <br>
+                                            <small>Pizzas</small>
+                                        </td>
+                                        <td>Salsa de tomate, queso mozzarella, jamón, peperoni, champiñones, pimiento morrón, cebolla y aceitunas.<br>
+                                            <small class="muted">Queso extra:20
+Champiñones extra:20</small>
+                                        </td>
+                                        <td>$250.00</td>
+                                        <td>
+                                            <span class="status ">Disponible</span>
+                                        </td>
+                                        <td>
+                                            <div class="actions">
+                                                <a class="button outline small" href="producto-formulario.html">Editar</a>
+                                                <button class="button ghost small">Retirar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <footer class="admin-footer">Pizzas a la leña Allende</footer>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#171715">
+        <title>Entradas y salidas | Allende</title>
+        <link rel="icon" href="../../images/logo.png">
+        <link rel="stylesheet" href="../css/inventario.css">
+        
+    </head>
+    <body>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="admin-layout">
+            <aside id="admin-sidebar" class="admin-sidebar">
+                <a class="brand" href="../../index.html">
+                    <img src="../../images/logo.png" alt="Logo de Pizzas a la leña Allende">
+                    <span>
+                        <strong>ALLENDE</strong>
+                        <small>PIZZAS A LA LEÑA</small>
+                    </span>
+                </a>
+                <nav aria-label="Administración">
+                    <a href="index.html" class="">
+                        <span class="nav-icon" aria-hidden="true">⌂</span>Panel</a>
+                    <a href="productos.html" class="">
+                        <span class="nav-icon" aria-hidden="true">◫</span>Productos</a>
+                    <a href="promociones.html" class="">
+                        <span class="nav-icon" aria-hidden="true">◇</span>Promociones</a>
+                    <a href="pedidos.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▤</span>Pedidos</a>
+                    <a href="contenido.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▣</span>Contenido del sitio</a>
+                    <a href="inventario.html" class="active" aria-current="page">
+                        <span class="nav-icon" aria-hidden="true">▦</span>Inventario</a>
+                    <a href="ventas.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▥</span>Punto de venta</a>
+                    <a href="reportes.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▥</span>Reportes</a>
+                    <a href="usuarios.html" class="">
+                        <span class="nav-icon" aria-hidden="true">♙</span>Usuarios</a>
+                    <div class="nav-bottom">
+                        <a href="../../index.html">↗ Ver sitio público</a>
+                        <a href="../../login.html">Salir</a>
+                    </div>
+                </nav>
+            </aside>
+            <div>
+                <div id="admin-topbar" class="admin-topbar">
+                    <span class="small">Administración de Allende</span>
+                    <div class="actions">
+                        <span>Administrador</span>
+                        <a class="text-button" href="../../login.html">Salir</a>
+                    </div>
+                </div>
+                <main id="contenido" class="admin-content">
+                    <div class="admin-heading">
+                        <div>
+                            <h1>Inventario</h1>
+                            <p>Administra las existencias y registra entradas y salidas de insumos.</p>
+                        </div>
+                    </div>
+                    <div class="admin-split">
+                        <section>
+                            <div class="tab-list">
+                                <button class="active">Existencias</button>
+                                <button>Movimientos</button>
+                            </div>
+                            <div id="stock-list">
+                                <div class="table-wrap">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Insumo</th>
+                                                <th scope="col">Unidad</th>
+                                                <th scope="col">Existencia</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Harina</td>
+                                                <td>kg</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Queso mozzarella</td>
+                                                <td>kg</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Salsa de tomate</td>
+                                                <td>litros</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="stack">
+                            <form class="card" id="movement-form">
+                                <h2>Registrar movimiento</h2>
+                                <div class="field">
+                                    <label for="tipo">Tipo</label>
+                                    <select id="tipo" name="tipo">
+                                        <option value="Entrada" selected>Entrada</option>
+                                        <option value="Salida">Salida</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="insumo">Insumo</label>
+                                    <select id="insumo" name="insumo" required="">
+                                        <option value="i1" selected>Harina (kg)</option>
+                                        <option value="i2">Queso mozzarella (kg)</option>
+                                        <option value="i3">Salsa de tomate (litros)</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="cantidad">Cantidad</label>
+                                    <input id="cantidad" name="cantidad" type="number" required="" min="0.001" step="0.001" max="999999" value="">
+                                </div>
+                                <div class="field">
+                                    <label for="motivo">Motivo</label>
+                                    <input id="motivo" name="motivo" type="text" required="" maxlength="180" value="">
+                                </div>
+                                <p class="form-error" id="movement-error" role="alert"></p>
+                                <button class="button full" type="button">Registrar movimiento</button>
+                            </form>
+                            <form class="card" id="supply-form">
+                                <h3>Nuevo insumo</h3>
+                                <div class="field">
+                                    <label for="supply-name">Nombre del insumo</label>
+                                    <input id="supply-name" name="supply-name" type="text" required="" maxlength="70" value="">
+                                </div>
+                                <div class="field">
+                                    <label for="supply-unit">Unidad (kg, litros, piezas…)</label>
+                                    <input id="supply-unit" name="supply-unit" type="text" required="" maxlength="20" value="">
+                                </div>
+                                <button class="button outline" type="button">Agregar insumo</button>
+                            </form>
+                        </div>
+                    </div>
+                    <footer class="admin-footer">Pizzas a la leña Allende</footer>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
