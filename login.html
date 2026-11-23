@@ -11,13 +11,13 @@
         <a class="skip-link" href="#contenido">Saltar al contenido</a>
         <header id="site-header" class="site-header">
             <div class="container header-inner">
-                <a class="brand" href="index.html">
+                <button class="brand" id="menu-toggle" type="button" aria-controls="side-menu" aria-expanded="false" aria-label="Abrir menú lateral">
                     <img src="images/logo.png" alt="Logo de Pizzas a la leña Allende">
                     <span>
                         <strong>ALLENDE</strong>
                         <small>PIZZAS A LA LEÑA</small>
                     </span>
-                </a>
+                </button>
                 <nav id="public-nav" class="site-nav" aria-label="Principal">
                     <a href="index.html#inicio">Inicio</a>
                     <a href="index.html#menu">Menú</a>
@@ -26,12 +26,23 @@
                     <a href="index.html#contacto">Contacto</a>
                 </nav>
                 <div class="header-actions">
-                    <a class="cart-link" href="pedido.html">Mi pedido <!--<span class="badge">2</span>-->
-                    </a>
-                    <a class="button" href="index.html#menu">Pedir ahora</a>
+                    <a class="button" href="pedido.html">Pedir ahora</a>
                 </div>
             </div>
         </header>
+        <div class="menu-overlay" id="menu-overlay" aria-hidden="true"></div>
+        <aside class="side-menu" id="side-menu" aria-label="Menú principal" aria-hidden="true">
+            <div class="side-menu-header">
+                <span>Menú</span>
+                <button class="side-menu-close" id="menu-close" type="button" aria-label="Cerrar menú lateral">×</button>
+            </div>
+            <nav>
+                <a href="index.html#inicio">Inicio</a>
+                <a href="index.html#menu">Menú</a>
+                <a href="pedido.html">Mi pedido</a>
+                <a href="login.html">Administrador</a>
+            </nav>
+        </aside>
         <main id="contenido">
             <div class="login-wrap">
                 <section class="card login-card">
@@ -66,10 +77,11 @@
                 </a>
                 <div class="actions">
                     <a href="index.html#contacto">Contacto</a>
-                    <a href="login.html">Acceso administrativo</a>
                 </div>
                 <p>Pizzas a la leña Allende · Ciudad Hidalgo, Michoacán</p>
             </div>
         </footer>
+        <script src="js/catalogo-pedido.js"></script>
+        <script src="js/menu.js"></script>
     </body>
 </html>

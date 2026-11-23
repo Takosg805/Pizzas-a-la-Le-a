@@ -24,20 +24,10 @@
                         <span class="nav-icon" aria-hidden="true">⌂</span>Panel</a>
                     <a href="productos.html" class="">
                         <span class="nav-icon" aria-hidden="true">◫</span>Productos</a>
-                    <a href="promociones.html" class="">
-                        <span class="nav-icon" aria-hidden="true">◇</span>Promociones</a>
                     <a href="pedidos.html" class="">
                         <span class="nav-icon" aria-hidden="true">▤</span>Pedidos</a>
                     <a href="contenido.html" class="active" aria-current="page">
                         <span class="nav-icon" aria-hidden="true">▣</span>Contenido del sitio</a>
-                    <a href="inventario.html" class="">
-                        <span class="nav-icon" aria-hidden="true">▦</span>Inventario</a>
-                    <a href="ventas.html" class="">
-                        <span class="nav-icon" aria-hidden="true">▥</span>Punto de venta</a>
-                    <a href="reportes.html" class="">
-                        <span class="nav-icon" aria-hidden="true">▥</span>Reportes</a>
-                    <a href="usuarios.html" class="">
-                        <span class="nav-icon" aria-hidden="true">♙</span>Usuarios</a>
                     <div class="nav-bottom">
                         <a href="../../index.html">↗ Ver sitio público</a>
                         <a href="../../login.html">Salir</a>
@@ -74,7 +64,20 @@
                             <div class="field-row">
                                 <div class="field">
                                     <label for="telefono">Teléfono</label>
-                                    <input id="telefono" name="telefono" type="tel" required="" pattern="[0-9 +()-]{10,20}" maxlength="20" value="7861249043">
+                                    <input id="telefono" name="telefono" type="tel" required="" pattern="[0-9 ]+" maxlength="20" value="7861249043">
+                                </div>
+                                <div class="field">
+                                    <label for="whatsapp-vendedor">WhatsApp del vendedor</label>
+                                    <input id="whatsapp-vendedor" name="whatsapp-vendedor" type="tel" required="" pattern="[0-9 ]+" maxlength="20" value="7861249043" placeholder="Ej. 7861249043">
+                                    <small class="muted">Número al que se enviará el pedido confirmado.</small>
+                                </div>
+                                <div class="field">
+                                    <label for="banco-transferencia">Banco para transferencias</label>
+                                    <input id="banco-transferencia" name="banco-transferencia" type="text" maxlength="100" value="Por configurar" placeholder="Ej. BBVA">
+                                </div>
+                                <div class="field">
+                                    <label for="clabe-transferencia">CLABE interbancaria</label>
+                                    <input id="clabe-transferencia" name="clabe-transferencia" type="text" inputmode="numeric" pattern="[0-9]{18}" maxlength="18" value="" placeholder="18 dígitos">
                                 </div>
                                 <div class="field">
                                     <label for="horarios">Horario</label>
@@ -119,11 +122,12 @@
                             </div>
                         </section>
                         <p id="content-error" class="form-error" role="alert"></p>
-                        <button type="button" class="button">Guardar cambios</button>
+                        <button type="submit" class="button">Guardar cambios</button>
                     </form>
                     <footer class="admin-footer">Pizzas a la leña Allende</footer>
                 </main>
             </div>
+            <script src="../../js/catalogo-pedido.js"></script>
         </div>
     </body>
 </html>
