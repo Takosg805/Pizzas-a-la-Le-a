@@ -11,13 +11,21 @@
         <a class="skip-link" href="#contenido">Saltar al contenido</a>
         <header id="site-header" class="site-header">
             <div class="container header-inner">
+<<<<<<< HEAD
                 <a class="brand" href="index.html">
+=======
+                <button class="brand" id="menu-toggle" type="button" aria-controls="side-menu" aria-expanded="false" aria-label="Abrir menú lateral">
+>>>>>>> origin/main
                     <img src="images/logo.png" alt="Logo de Pizzas a la leña Allende">
                     <span>
                         <strong>ALLENDE</strong>
                         <small>PIZZAS A LA LEÑA</small>
                     </span>
+<<<<<<< HEAD
                 </a>
+=======
+                </button>
+>>>>>>> origin/main
                 <nav id="public-nav" class="site-nav" aria-label="Principal">
                     <a href="index.html#inicio">Inicio</a>
                     <a href="index.html#menu">Menú</a>
@@ -26,12 +34,32 @@
                     <a href="index.html#contacto">Contacto</a>
                 </nav>
                 <div class="header-actions">
+<<<<<<< HEAD
                     <a class="cart-link" href="pedido.html">Mi pedido <span class="badge">2</span>
                     </a>
                     <a class="button" href="index.html#menu">Pedir ahora</a>
                 </div>
             </div>
         </header>
+=======
+                    <a class="button" href="pedido.html">Pedir ahora</a>
+                </div>
+            </div>
+        </header>
+        <div class="menu-overlay" id="menu-overlay" aria-hidden="true"></div>
+        <aside class="side-menu" id="side-menu" aria-label="Menú principal" aria-hidden="true">
+            <div class="side-menu-header">
+                <span>Menú</span>
+                <button class="side-menu-close" id="menu-close" type="button" aria-label="Cerrar menú lateral">×</button>
+            </div>
+            <nav>
+                <a href="index.html#inicio">Inicio</a>
+                <a href="index.html#menu">Menú</a>
+                <a href="pedido.html">Mi pedido</a>
+                <a href="login.html">Administrador</a>
+            </nav>
+        </aside>
+>>>>>>> origin/main
         <main id="contenido">
             <section class="page-main container">
                 <div class="page-heading">
@@ -105,13 +133,31 @@
                                 <label>
                                     <input type="radio" name="entrega" value="Recoger en tienda"> Recoger en tienda</label>
                             </div>
+<<<<<<< HEAD
+=======
+                            <h3>Método de pago</h3>
+                            <div class="radio-group radio-pago">
+                                <label>
+                                    <input type="radio" name="pago" value="Efectivo" checked> Efectivo</label>
+                                <label>
+                                    <input type="radio" name="pago" value="Transferencia"> Transferencia</label>
+                            </div>
+                            <div id="datos-transferencia" class="datos-transferencia" hidden>
+                                <p><strong>Banco:</strong> <span id="banco-transferencia">Por configurar</span></p>
+                                <p><strong>CLABE:</strong> <span id="clabe-transferencia">Por configurar</span></p>
+                            </div>
+>>>>>>> origin/main
                             <div class="field">
                                 <label for="nombre">Nombre</label>
                                 <input id="nombre" name="nombre" type="text" required="" maxlength="100" autocomplete="name" value="">
                             </div>
                             <div class="field">
                                 <label for="telefono">Teléfono</label>
+<<<<<<< HEAD
                                 <input id="telefono" name="telefono" type="tel" required="" pattern="[0-9 +()-]{10,20}" maxlength="20" autocomplete="tel" value="">
+=======
+                                <input id="telefono" name="telefono" type="tel" required="" pattern="[0-9 ]+" maxlength="20" autocomplete="tel" value="">
+>>>>>>> origin/main
                             </div>
                             <div id="delivery-fields">
                                 <div class="field">
@@ -123,14 +169,30 @@
                                     <input id="referencias" name="referencias" type="text" maxlength="250" value="">
                                 </div>
                             </div>
+<<<<<<< HEAD
                             <p class="notice">Pago por transferencia. Los datos bancarios serán proporcionados por el negocio.</p>
                             <p class="form-error" id="checkout-error" role="alert"></p>
                             <button class="button full" type="button">Confirmar pedido</button>
+=======
+                            <p class="notice">Selecciona efectivo o transferencia antes de confirmar tu pedido.</p>
+                            <p class="form-error" id="checkout-error" role="alert"></p>
+                            <button class="button full" type="submit">Confirmar pedido</button>
+>>>>>>> origin/main
                         </form>
                     </aside>
                 </div>
             </section>
         </main>
+<<<<<<< HEAD
+=======
+        <div class="modal-confirmacion" id="modal-confirmacion" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="titulo-confirmacion">
+            <div class="modal-confirmacion-contenido">
+                <button class="cerrar-modal" id="cerrar-modal-confirmacion" type="button" aria-label="Cerrar mensaje">×</button>
+                <h2 id="titulo-confirmacion">Espere su confirmación por WhatsApp</h2>
+                <p>Su pedido fue enviado al vendedor. Le responderemos para confirmar disponibilidad y entrega.</p>
+            </div>
+        </div>
+>>>>>>> origin/main
         <footer id="site-footer" class="site-footer">
             <div class="container footer-inner">
                 <a class="brand" href="index.html">
@@ -142,10 +204,18 @@
                 </a>
                 <div class="actions">
                     <a href="index.html#contacto">Contacto</a>
+<<<<<<< HEAD
                     <a href="login.html">Acceso administrativo</a>
+=======
+>>>>>>> origin/main
                 </div>
                 <p>Pizzas a la leña Allende · Ciudad Hidalgo, Michoacán</p>
             </div>
         </footer>
+<<<<<<< HEAD
+=======
+        <script src="js/catalogo-pedido.js"></script>
+        <script src="js/menu.js"></script>
+>>>>>>> origin/main
     </body>
 </html>
