@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#171715">
+        <title>Gestión de promociones | Allende</title>
+        <link rel="icon" href="../../images/logo.png">
+        <link rel="stylesheet" href="../css/promociones.css">
+        
+    </head>
+    <body>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="admin-layout">
+            <aside id="admin-sidebar" class="admin-sidebar">
+                <a class="brand" href="../../index.html">
+                    <img src="../../images/logo.png" alt="Logo de Pizzas a la leña Allende">
+                    <span>
+                        <strong>ALLENDE</strong>
+                        <small>PIZZAS A LA LEÑA</small>
+                    </span>
+                </a>
+                <nav aria-label="Administración">
+                    <a href="index.html" class="">
+                        <span class="nav-icon" aria-hidden="true">⌂</span>Panel</a>
+                    <a href="productos.html" class="">
+                        <span class="nav-icon" aria-hidden="true">◫</span>Productos</a>
+                    <a href="promociones.html" class="active" aria-current="page">
+                        <span class="nav-icon" aria-hidden="true">◇</span>Promociones</a>
+                    <a href="pedidos.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▤</span>Pedidos</a>
+                    <a href="contenido.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▣</span>Contenido del sitio</a>
+                    <a href="inventario.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▦</span>Inventario</a>
+                    <a href="ventas.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▥</span>Punto de venta</a>
+                    <a href="reportes.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▥</span>Reportes</a>
+                    <a href="usuarios.html" class="">
+                        <span class="nav-icon" aria-hidden="true">♙</span>Usuarios</a>
+                    <div class="nav-bottom">
+                        <a href="../../index.html">↗ Ver sitio público</a>
+                        <a href="../../login.html">Salir</a>
+                    </div>
+                </nav>
+            </aside>
+            <div>
+                <div id="admin-topbar" class="admin-topbar">
+                    <span class="small">Administración de Allende</span>
+                    <div class="actions">
+                        <span>Administrador</span>
+                        <a class="text-button" href="../../login.html">Salir</a>
+                    </div>
+                </div>
+                <main id="contenido" class="admin-content">
+                    <div class="admin-heading">
+                        <div>
+                            <h1>Promociones</h1>
+                            <p>Publica ofertas y define su vigencia.</p>
+                        </div>
+                        <button class="button" id="new-promo">+ Nueva promoción</button>
+                    </div>
+                    <div class="admin-split">
+                        <div id="promos-list" class="promo-admin-grid">
+                            <article class="promo-card">
+                                <img src="../../images/pizza_mexicana.png" alt="Promoción de ejemplo">
+                                <div class="info">
+                                    <h3>Promoción de ejemplo</h3>
+                                    <p>Aquí podrás mostrar la descripción de una promoción del negocio.</p>
+                                    <p>
+                                        <span class="status ">Borrador</span>
+                                    </p>
+                                    <p class="small">Sin inicio / Sin fin</p>
+                                    <div class="actions">
+                                        <button class="button outline small">Editar</button>
+                                        <button class="text-button">Retirar</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <form id="promo-form" class="card">
+                            <h2 id="promo-form-title">Nueva promoción</h2>
+                            <div class="field">
+                                <label for="titulo">Título</label>
+                                <input id="titulo" name="titulo" type="text" required="" maxlength="100" value="">
+                            </div>
+                            <div class="field">
+                                <label for="descripcion">Descripción</label>
+                                <textarea id="descripcion" name="descripcion" required="" maxlength="600"></textarea>
+                            </div>
+                            <div class="field">
+                                <label for="imagen">Imagen (máx. 1 MB)</label>
+                                <input id="imagen" name="imagen" type="file" accept="image/jpeg,image/png,image/webp" value="">
+                            </div>
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="desde">Desde (opcional)</label>
+                                    <input id="desde" name="desde" type="date" value="">
+                                </div>
+                                <div class="field">
+                                    <label for="hasta">Hasta (opcional)</label>
+                                    <input id="hasta" name="hasta" type="date" value="">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="estado">Estado</label>
+                                <select id="estado" name="estado">
+                                    <option value="Borrador" selected>Borrador</option>
+                                    <option value="Publicada">Publicada</option>
+                                </select>
+                            </div>
+                            <p class="form-error" id="promo-error" role="alert"></p>
+                            <div class="actions">
+                                <button class="button" type="button">Guardar promoción</button>
+                                <button class="button ghost" type="button" id="cancel-promo">Limpiar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <footer class="admin-footer">Pizzas a la leña Allende</footer>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

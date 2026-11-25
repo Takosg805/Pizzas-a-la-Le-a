@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#171715">
+        <title>Reportes | Allende</title>
+        <link rel="icon" href="../../images/logo.png">
+        <link rel="stylesheet" href="../css/reportes.css">
+        
+    </head>
+    <body>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <div class="admin-layout">
+            <aside id="admin-sidebar" class="admin-sidebar">
+                <a class="brand" href="../../index.html">
+                    <img src="../../images/logo.png" alt="Logo de Pizzas a la leña Allende">
+                    <span>
+                        <strong>ALLENDE</strong>
+                        <small>PIZZAS A LA LEÑA</small>
+                    </span>
+                </a>
+                <nav aria-label="Administración">
+                    <a href="index.html" class="">
+                        <span class="nav-icon" aria-hidden="true">⌂</span>Panel</a>
+                    <a href="productos.html" class="">
+                        <span class="nav-icon" aria-hidden="true">◫</span>Productos</a>
+                    <a href="promociones.html" class="">
+                        <span class="nav-icon" aria-hidden="true">◇</span>Promociones</a>
+                    <a href="pedidos.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▤</span>Pedidos</a>
+                    <a href="contenido.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▣</span>Contenido del sitio</a>
+                    <a href="inventario.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▦</span>Inventario</a>
+                    <a href="ventas.html" class="">
+                        <span class="nav-icon" aria-hidden="true">▥</span>Punto de venta</a>
+                    <a href="reportes.html" class="active" aria-current="page">
+                        <span class="nav-icon" aria-hidden="true">▥</span>Reportes</a>
+                    <a href="usuarios.html" class="">
+                        <span class="nav-icon" aria-hidden="true">♙</span>Usuarios</a>
+                    <div class="nav-bottom">
+                        <a href="../../index.html">↗ Ver sitio público</a>
+                        <a href="../../login.html">Salir</a>
+                    </div>
+                </nav>
+            </aside>
+            <div>
+                <div id="admin-topbar" class="admin-topbar">
+                    <span class="small">Administración de Allende</span>
+                    <div class="actions">
+                        <span>Administrador</span>
+                        <a class="text-button" href="../../login.html">Salir</a>
+                    </div>
+                </div>
+                <main id="contenido" class="admin-content">
+                    <div class="admin-heading">
+                        <div>
+                            <h1>Reportes</h1>
+                            <p>Consulta ventas o pedidos locales por fecha.</p>
+                        </div>
+                        <button class="button outline" id="export-report">↓ Exportar CSV</button>
+                    </div>
+                    <form id="report-form" class="card report-filters">
+                        <div class="field">
+                            <label for="desde">Desde</label>
+                            <input id="desde" name="desde" type="date" value="">
+                        </div>
+                        <div class="field">
+                            <label for="hasta">Hasta</label>
+                            <input id="hasta" name="hasta" type="date" value="">
+                        </div>
+                        <div class="field">
+                            <label for="reporte">Tipo de reporte</label>
+                            <select id="reporte" name="reporte">
+                                <option value="Ventas" selected>Ventas</option>
+                                <option value="Pedidos">Pedidos</option>
+                            </select>
+                        </div>
+                        <button class="button" type="button" style="margin-bottom:16px">Consultar</button>
+                    </form>
+                    <p class="form-error" id="report-error" role="alert"></p>
+                    <div id="report-stats" class="stats" style="margin-top:24px">
+                        <div class="stat">
+                            <span>Registros</span>
+                            <strong>1</strong>
+                        </div>
+                        <div class="stat">
+                            <span>Importe de productos</span>
+                            <strong>$500.00</strong>
+                        </div>
+                        <div class="stat">
+                            <span>Importe verificado</span>
+                            <strong>$500.00</strong>
+                        </div>
+                    </div>
+                    <div id="report-results">
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Folio</th>
+                                        <th scope="col">Cliente</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Pago / estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>22/10/26, 12:00 p.m.</td>
+                                        <td>V0001</td>
+                                        <td>Cliente de ejemplo</td>
+                                        <td>$500.00</td>
+                                        <td>Efectivo / Verificado</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p class="small">Los reportes de ventas y pedidos se muestran separados para evitar sumar dos veces operaciones distintas. Los pagos pendientes no se consideran cobrados.</p>
+                    <footer class="admin-footer">Pizzas a la leña Allende</footer>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

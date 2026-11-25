@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#171715">
+        <title>Mi pedido | Allende</title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="css/pedido.css">
+    </head>
+    <body>
+        <a class="skip-link" href="#contenido">Saltar al contenido</a>
+        <header id="site-header" class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="index.html">
+                    <img src="images/logo.png" alt="Logo de Pizzas a la leña Allende">
+                    <span>
+                        <strong>ALLENDE</strong>
+                        <small>PIZZAS A LA LEÑA</small>
+                    </span>
+                </a>
+                <nav id="public-nav" class="site-nav" aria-label="Principal">
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="index.html#menu">Menú</a>
+                    <a href="index.html#promociones">Promociones</a>
+                    <a href="index.html#nosotros">Nosotros</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </nav>
+                <div class="header-actions">
+                    <a class="cart-link" href="pedido.html">Mi pedido <span class="badge">2</span>
+                    </a>
+                    <a class="button" href="index.html#menu">Pedir ahora</a>
+                </div>
+            </div>
+        </header>
+        <main id="contenido">
+            <section class="page-main container">
+                <div class="page-heading">
+                    <a href="index.html#menu">← Seguir comprando</a>
+                    <h1 style="margin-top:20px">Mi pedido</h1>
+                    <p>Revisa tus productos y completa los datos de entrega.</p>
+                </div>
+                <div id="checkout-empty" hidden=""></div>
+                <div class="two-columns" id="checkout-layout">
+                    <div id="cart-list" class="stack">
+                        <article class="cart-row">
+                            <img src="images/pizza_peperoni.png" alt="Peperoni">
+                            <div>
+                                <h3>Peperoni</h3>
+                                <p class="small">Sin extras</p>
+                                <div class="summary-line">
+                                    <strong>$250.00</strong>
+                                    <span class="small">$250.00 c/u</span>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <button type="button" aria-label="Restar una unidad de Peperoni">−</button>
+                                        <span>1</span>
+                                        <button type="button" aria-label="Agregar una unidad de Peperoni">+</button>
+                                    </div>
+                                    <button class="text-button">Quitar</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="cart-row">
+                            <img src="images/pizza_hawaiana.png" alt="Hawaiana">
+                            <div>
+                                <h3>Hawaiana</h3>
+                                <p class="small">Sin extras</p>
+                                <div class="summary-line">
+                                    <strong>$250.00</strong>
+                                    <span class="small">$250.00 c/u</span>
+                                </div>
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <button type="button" aria-label="Restar una unidad de Hawaiana">−</button>
+                                        <span>1</span>
+                                        <button type="button" aria-label="Agregar una unidad de Hawaiana">+</button>
+                                    </div>
+                                    <button class="text-button">Quitar</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <aside class="card summary-card">
+                        <h2>Resumen de tu pedido</h2>
+                        <div id="cart-summary">
+                            <div class="summary-line">
+                                <span>Productos</span>
+                                <span>2</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Entrega</span>
+                                <span>Por confirmar con el negocio</span>
+                            </div>
+                            <div class="summary-line total">
+                                <span>Total de productos</span>
+                                <span>$500.00</span>
+                            </div>
+                        </div>
+                        <form id="checkout-form">
+                            <h3>Selecciona la entrega</h3>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="entrega" value="A domicilio" checked> A domicilio</label>
+                                <label>
+                                    <input type="radio" name="entrega" value="Recoger en tienda"> Recoger en tienda</label>
+                            </div>
+                            <div class="field">
+                                <label for="nombre">Nombre</label>
+                                <input id="nombre" name="nombre" type="text" required="" maxlength="100" autocomplete="name" value="">
+                            </div>
+                            <div class="field">
+                                <label for="telefono">Teléfono</label>
+                                <input id="telefono" name="telefono" type="tel" required="" pattern="[0-9 +()-]{10,20}" maxlength="20" autocomplete="tel" value="">
+                            </div>
+                            <div id="delivery-fields">
+                                <div class="field">
+                                    <label for="direccion">Dirección de entrega</label>
+                                    <textarea id="direccion" name="direccion" required="" maxlength="250" autocomplete="street-address"></textarea>
+                                </div>
+                                <div class="field">
+                                    <label for="referencias">Referencias (opcional)</label>
+                                    <input id="referencias" name="referencias" type="text" maxlength="250" value="">
+                                </div>
+                            </div>
+                            <p class="notice">Pago por transferencia. Los datos bancarios serán proporcionados por el negocio.</p>
+                            <p class="form-error" id="checkout-error" role="alert"></p>
+                            <button class="button full" type="button">Confirmar pedido</button>
+                        </form>
+                    </aside>
+                </div>
+            </section>
+        </main>
+        <footer id="site-footer" class="site-footer">
+            <div class="container footer-inner">
+                <a class="brand" href="index.html">
+                    <img src="images/logo.png" alt="Logo de Pizzas a la leña Allende">
+                    <span>
+                        <strong>ALLENDE</strong>
+                        <small>PIZZAS A LA LEÑA</small>
+                    </span>
+                </a>
+                <div class="actions">
+                    <a href="index.html#contacto">Contacto</a>
+                    <a href="login.html">Acceso administrativo</a>
+                </div>
+                <p>Pizzas a la leña Allende · Ciudad Hidalgo, Michoacán</p>
+            </div>
+        </footer>
+    </body>
+</html>
